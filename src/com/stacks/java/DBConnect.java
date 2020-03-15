@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class DBConnect {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/manager";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/manager?serverTimezone=UTC";
     private static Connection connection;
     public static Statement statement;
 
