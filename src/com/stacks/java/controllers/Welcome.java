@@ -4,8 +4,6 @@ import com.stacks.java.DBConnect;
 import com.stacks.java.Main;
 //import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 import javafx.application.Platform;
-import javafx.beans.property.SimpleSetProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,10 +18,7 @@ import javafx.stage.Stage;
 //import jdk.nashorn.internal.objects.Global;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.SQLException;
-import java.util.ResourceBundle;
-import java.util.logging.Logger;
 
 public class Welcome {
     public static  String loguser;

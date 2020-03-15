@@ -1,16 +1,11 @@
 package com.stacks.java.controllers;
 import com.stacks.java.DBConnect;
-import com.stacks.java.controllers.Welcome;
 import com.stacks.java.Main;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -19,14 +14,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
-import java.util.List;
-import java.util.Observable;
-import java.util.ResourceBundle;
 
 import static com.stacks.java.controllers.Welcome.*;
-import static javafx.scene.text.Text.*;
 
 public class Dashboard {
    //Table Skeleton
