@@ -25,7 +25,6 @@ Storage on SQL server using XAMPP
 #### Developed by: [**Agnellus Fernandes**](https://www.linkedin.com/in/agnellus-fernandes-81232b192)
 ***
 #### Screenshots!
-***
 
 Welcome
 
