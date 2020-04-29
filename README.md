@@ -48,9 +48,11 @@ Generate
 ![1](ScreenShots/5.JPG)
 
 Encryption
+
 ![1](ScreenShots/pm1.PNG)
 
 Decryption
+
 ![1](ScreenShots/pm2.PNG)
 
 ***
