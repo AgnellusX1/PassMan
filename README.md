@@ -48,10 +48,10 @@ Generate
 ![1](ScreenShots/5.JPG)
 
 Encryption
-pm1.PNG
+![1](ScreenShots/pm1.PNG)
 
 Decryption
-pm1.PNG
+![1](ScreenShots/pm2.PNG)
 
 ***
 **Tools used**
