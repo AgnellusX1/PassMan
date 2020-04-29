@@ -34,6 +34,9 @@ public class Dashboard {
     private Button Create;
 
     @FXML
+    private Button decrypt;
+
+    @FXML
     private Button logout;
 
     @FXML
@@ -86,11 +89,7 @@ public class Dashboard {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
-
-
-
 
 
     private void buildData() throws SQLException {
@@ -108,4 +107,15 @@ public class Dashboard {
         dashTable.setItems(data);
     }
 
+    public void ondecrypt1(ActionEvent actionEvent) {
+        try {
+            Stage registerStage = Main.stage;
+            root = FXMLLoader.load(getClass().getResource("/com/stacks/java/fxml/decrypt.fxml"));
+            registerStage.setScene(new Scene(root));
+            registerStage.setResizable(false);
+            registerStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

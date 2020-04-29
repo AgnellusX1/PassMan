@@ -14,9 +14,19 @@ import javafx.stage.Stage;
 import org.apache.commons.lang3.RandomStringUtils;
 
 import java.io.IOException;
+import java.security.Key;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Arrays;
+import java.util.Base64;
 
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
 import static com.stacks.java.controllers.Welcome.loguser;
+
 
 public class Generate {
 
@@ -72,13 +82,47 @@ public class Generate {
     }
 
     @FXML
-    void onSave(ActionEvent event) {
+    void onSave(ActionEvent event) throws SQLException {
+
         String account = acc.getText();
         String pass = showpass.getText();
+        String query = String.format("SELECT `password` FROM `usertable` WHERE `username`='%s'", loguser);
+        ResultSet rs = DBConnect.statement.executeQuery(query);
+            String pass1=null;
+            if(rs.next()) {
+                 pass1 = rs.getString(1);
+            }
+            System.out.println(pass1);
+        String ens=null;
+        try{
+            SecretKeySpec secretKey;
+            byte[] key;
+            MessageDigest sha;
+            key = pass1.getBytes("UTF-8");
+            sha = MessageDigest.getInstance("SHA-1");
+            key = sha.digest(key);
+            key = Arrays.copyOf(key, 16);
+            secretKey = new SecretKeySpec(key, "AES");
+            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+
+            ens= Base64.getEncoder().encodeToString(cipher.doFinal(pass.getBytes("UTF-8")));
+            System.out.println(ens);
+        }
+        catch (Exception e) {
+            System.out.println("Error while encrypting: " + e.toString());
+        }
+
+
+
+
+
+
 
         try {
-            String query = String.format("INSERT INTO `passtable` (`username`, `acc`, `pass`) VALUES ('%s', '%s', '%s')",loguser,account,pass);
-            DBConnect.getStatement().executeUpdate(query);
+            String qry = String.format("INSERT INTO `passtable` (`username`, `acc`, `pass`) VALUES ('%s', '%s', '%s')", loguser, account, ens);
+            DBConnect.getStatement().executeUpdate(qry);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -87,16 +131,16 @@ public class Generate {
         //Save the Generated Password
 
 
-
-        try{
+        try {
             Stage loginStage = Main.stage;
             root = FXMLLoader.load(getClass().getResource("/com/stacks/java/fxml/Dashboard.fxml"));
             loginStage.setScene(new Scene(root));
             loginStage.setResizable(false);
             loginStage.show();
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 }
