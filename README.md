@@ -23,7 +23,7 @@ Storage on SQL server using XAMPP
 	 - Length Flexibility
 
 ***
-#### Developed by: [**Agnellus Fernandes**](https://www.linkedin.com/in/agnellus-fernandes-81232b192)
+#### Developed by: [**Agnellus Fernandes**](https://www.linkedin.com/in/agnellus-fernandes-81232b192) and [**Anisha Fernandes**]
 ***
 #### Screenshots!
 
