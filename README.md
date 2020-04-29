@@ -46,6 +46,12 @@ Generate
 
 ![1](ScreenShots/5.JPG)
 
+Encryption
+![1] (pm1.jpg)
+
+Decryption
+![1] (pm2.jpg)
+
 ***
 **Tools used**
 
