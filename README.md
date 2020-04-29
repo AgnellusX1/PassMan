@@ -11,6 +11,7 @@ Storage on SQL server using XAMPP
  - Interactive UI
  - Secure offline, local storage
  - Multiple Users
+ - Encryption and decryption of passwords
  - Multiple Passwords Per User
  - Randomization Flexibility
  - Operating System Independent
