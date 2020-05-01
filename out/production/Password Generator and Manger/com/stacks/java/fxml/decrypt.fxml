@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stacks.java.controllers.decrypt">
+   <children>
+      <TextField fx:id="enteraccname" layoutX="143.0" layoutY="113.0" prefHeight="33.0" prefWidth="297.0" promptText="Enter the account name" />
+      <PasswordField fx:id="decryptpass" layoutX="143.0" layoutY="175.0" prefHeight="33.0" prefWidth="297.0" promptText="Enter the password used for login to  decrypt" />
+      <Button fx:id="backd" layoutX="269.0" layoutY="358.0" mnemonicParsing="false" onAction="#onbackd" prefHeight="25.0" prefWidth="80.0" text="BACK" />
+      <Button fx:id="decryptd" layoutX="222.0" layoutY="230.0" mnemonicParsing="false" onAction="#ondecryptd" text="Decrypt Your Password" />
+      <Label layoutX="181.0" layoutY="34.0" prefHeight="46.0" prefWidth="321.0" text="DECRYPT PAGE" textFill="#e10c0c">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="decryptpassd" layoutX="148.0" layoutY="276.0" prefHeight="25.0" prefWidth="289.0" promptText="Your decrypted password will appear here" />
+   </children>
+</AnchorPane>
