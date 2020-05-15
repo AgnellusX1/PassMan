@@ -11,6 +11,7 @@ Storage on SQL server using XAMPP
  - Interactive UI
  - Secure offline, local storage
  - Multiple Users
+ - Encryption and decryption of passwords
  - Multiple Passwords Per User
  - Randomization Flexibility
  - Operating System Independent
@@ -22,7 +23,7 @@ Storage on SQL server using XAMPP
 	 - Length Flexibility
 
 ***
-#### Developed by: [**Agnellus Fernandes**](https://www.linkedin.com/in/agnellus-fernandes-81232b192)
+#### Developed by: [**Agnellus Fernandes**](https://www.linkedin.com/in/agnellus-fernandes-81232b192) and [**Anisha Fernandes**]
 ***
 #### Screenshots!
 
@@ -45,6 +46,14 @@ Dashboard
 Generate
 
 ![1](ScreenShots/5.JPG)
+
+Encryption
+
+![1](ScreenShots/pm1.PNG)
+
+Decryption
+
+![1](ScreenShots/pm2.PNG)
 
 ***
 **Tools used**
