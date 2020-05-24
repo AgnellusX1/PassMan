@@ -1,5 +1,6 @@
 
-# Password Generator and Manager
+# PassMan
+## Password Manager and Secure Password Generator
 #### About Project
 
 A One-Stop-Solution for all passwords needs, From Generation of complex Passwords to Storing them
